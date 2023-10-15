@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex; /* Utilisation du modèle de boîte flexible pour le contenu du corps */
+    flex-direction: column; /* Alignement des éléments enfants en colonne */
+    align-items: center;
+    justify-content: center;
+    height: 20vh; /* Hauteur équivalente à 20% de la hauteur de la fenêtre visible */
+}
+p {        
+    font-size: 25px;
+    margin-bottom: 20px; /* Marge inférieure de 20 pixels pour créer de l'espace entre les paragraphes */
+}
+.p1 {
+    font-weight: bold;
+}
+.overlay {
+    position: absolute; /* Position absolue pour placer l'élément en dehors du flux normal de la page */
+    top: 0; /* Position en haut de l'élément parent */
+    left: 0; /* Position à gauche de l'élément parent */
+    width: 100%; /* Largeur de 100% pour couvrir toute la largeur de l'élément parent */
+    height: 100%; /* Hauteur de 100% pour couvrir toute la hauteur de l'élément parent */
+    display: flex; /* Utilisation du modèle de boîte flexible pour le contenu de l'overlay */
+    flex-direction: column; /* Alignement des éléments enfants en colonne */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initialement invisible (opacité à 0) */
+    transition: opacity 0.3s; /* Animation de fondu en cas de survol avec une durée de 0.3 seconde */
+}
+.overlay:hover {
+    opacity: 1;
+}
